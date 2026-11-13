@@ -1,62 +1,51 @@
-# Aadhaar Enrolment and Update Activity — Data Analysis
+# UIDAI Aadhaar Data Analysis
 
-Descriptive exploratory data analysis of aggregate Aadhaar enrolment, biometric-update and demographic-update activity, using Python, Pandas and Matplotlib.
+Exploratory analysis of Aadhaar enrolment, biometric updates and demographic updates using Python, Pandas, Matplotlib and Seaborn.
 
-## Open and run
+[**View the original notebook**](notebooks/UIDAI_EDA.ipynb) · [**Open in Google Colab**](https://colab.research.google.com/github/AishwaryB-SATI/UIDAI-Data-Analysis/blob/main/notebooks/UIDAI_EDA.ipynb)
 
-[**View the executed notebook**](notebooks/UIDAI_EDA.ipynb) · [**Open in Google Colab**](https://colab.research.google.com/github/AishwaryB-SATI/UIDAI-Data-Analysis/blob/main/notebooks/UIDAI_EDA.ipynb)
+## Analysis covered
 
-The notebook uses the aggregate CSV tables in `reports/`. When opened in Colab it loads those tables directly from this public repository; a local clone uses local files. Run the notebook cells in order. Colab normally includes Pandas and Matplotlib; install `requirements.txt` if they are unavailable.
+- State-wise and district-wise activity comparisons.
+- Yearly and monthly trends for enrolment, biometric updates and demographic updates.
+- Age-group activity comparisons.
+- State-versus-month heatmaps.
+- **Region-versus-month heatmaps** for all three services, using North, South, East, West, Central and North-East groupings to make geographic patterns easier to compare.
+- Regional interpretation and discussion of uneven activity.
 
-For local use, clone this repository, install its dependencies, and open `notebooks/UIDAI_EDA.ipynb` in Jupyter or VS Code with a Python notebook kernel:
+The notebook preserves the original 208 cells, analysis code, narrative and available saved outputs.
 
-```bash
-git clone https://github.com/AishwaryB-SATI/UIDAI-Data-Analysis.git
-cd UIDAI-Data-Analysis
-pip install -r requirements.txt
-```
+## Run the notebook
 
-## What this project contains
+Open the notebook in Google Colab. The original workflow mounts Google Drive and uses paths under `/content/drive/MyDrive/Aadhar_Dataset`, with some earlier setup cells referencing `Aadhar_Data`. Configure the input paths for your environment and provide the expected source exports or matching intermediate cleaned datasets. The original notebook includes setup retries and repeated exploratory steps; review the selected input path before running.
 
-- Monthly activity and observed reporting-day comparisons.
-- State-label and state-plus-district comparisons.
-- Source age-band totals and charts.
-- Previously prepared source-quality metrics and coverage records.
-- Executed notebook outputs and aggregate-total reconciliation checks.
+For local execution, install `requirements.txt`, replace Colab-specific Drive setup with local paths, and use Jupyter or a Python notebook kernel in VS Code.
 
-## Relationship to data cleaning
+The original notebook includes data-loading and cleaning steps that establish its analysis variables. A separate cleaning repository is planned; those dependencies remain preserved until its outputs and interface are available.
 
-Data preparation and exploratory analysis are organized as separate modules. This repository contains the exploratory analysis of the aggregate CSVs. These tables are not a cleaned row-level dataset. They support the included comparisons but cannot reconstruct record-level cleaning or every possible joint distribution.
+## Saved outputs and reproducibility
 
-Exact repeated rows were audited and retained because source record identity was undocumented. Labels were whitespace-normalized while spelling aliases were preserved. The notebook outputs were generated from the bundled aggregate CSVs.
+Available original outputs are embedded in the notebook. **The regional heatmap code is present, but its cells have no saved outputs in the original file.** Rendering those heatmaps requires executing their dependencies with the corresponding data.
 
-## Coverage and provenance
+The existing tables in `reports/` are supplemental aggregates. Separate monthly totals and state totals cannot reconstruct state-by-month or region-by-month heatmaps. They must not be substituted for the original joint data.
 
-The owner reports obtaining the source exports from the official UIDAI website. The exact source URL, download date and redistribution terms have not been independently verified. Original exports are not included. `reports/input_manifest.json` records their filenames and schemas.
+`reports/analysis_validation.json` documents checks on the supplemental aggregate-based notebook edition. It does not establish execution or validation of this original notebook.
 
-| Service | Previously recorded source rows | Recorded activity |
-|---|---:|---:|
-| Enrolment | 1,006,029 | 5,435,702 |
-| Biometric updates — partial export | 1,361,108 | 61,776,326 |
-| Demographic updates | 2,071,700 | 49,295,187 |
+## Data and interpretation
 
-Biometric filenames omit the 1,000,000–1,500,000 portion. Its results describe only the supplied subset. A demographic filename was previously supplied twice; only the retained copy contributed to the prepared results.
+The project uses aggregate activity exports reported as obtained from UIDAI. Original input filenames and schemas are recorded in `reports/input_manifest.json`; source exports are not bundled here.
 
-## Interpretation limits
+- Biometric coverage in the supplied file manifest is partial.
+- Activity counts are not unique residents or population-normalized coverage rates.
+- The original geographic mapping sends unmatched state labels to `Unknown`; inspect those labels when interpreting regional totals.
+- Month-based grouping can combine years; verify the date coverage before interpreting trends.
+- Descriptive patterns do not independently establish recurring seasonality, fraud, operational causes or resource shortages. Proposed interventions and narrative claims require separate validation.
 
-- Activity counts are not unique residents, coverage rates or population-normalized measures.
-- State labels retain aliases and historical names; rankings are provisional.
-- Missing dates are not established zero activity. Reporting coverage varies by month.
-- Peaks do not establish recurring seasonality, causality, fraud or staffing shortages.
-- Age fields retain source names; definitive boundary metadata remains to be confirmed.
-- No predictive, anomaly-detection or fraud-detection model is implemented.
+## Repository contents
 
-## Charts and reports
-
-![Enrolment activity](reports/enrolment_overview.png)
-
-![Biometric activity — partial coverage](reports/biometric_overview.png)
-
-![Demographic activity](reports/demographic_overview.png)
-
-See [analysis findings](reports/ANALYSIS.md), [data dictionary](DATA_DICTIONARY.md), and [current validation](reports/analysis_validation.json). Files prefixed `legacy_` retain the source-data validation and notebook-review records for traceability.
+| Location | Contents |
+|---|---|
+| `notebooks/UIDAI_EDA.ipynb` | Original Colab project, including trend plots and regional heatmap code |
+| `reports/` | Supplemental aggregates, charts, provenance and validation records |
+| `DATA_DICTIONARY.md` | Schema of the supplemental aggregate tables |
+| `requirements.txt` | Python analysis dependencies |
