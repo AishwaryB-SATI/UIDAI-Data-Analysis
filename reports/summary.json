@@ -1,0 +1,81 @@
+[
+  {
+    "service": "enrolment",
+    "files": 3,
+    "rows": 1006029,
+    "exact_repeat_rows": 22957,
+    "missing_values": {
+      "date": 0,
+      "state": 0,
+      "district": 0,
+      "pincode": 0,
+      "age_0_5": 0,
+      "age_5_17": 0,
+      "age_18_greater": 0
+    },
+    "invalid_dates": 0,
+    "invalid_age_count_rows": 0,
+    "excluded_rows": 0,
+    "first_date": "2025-03-02",
+    "last_date": "2025-12-31",
+    "observed_days": 92,
+    "state_labels": 54,
+    "total_activity": 5435702,
+    "repeat_row_activity": 103943,
+    "top_state_label": "Uttar Pradesh",
+    "top_state_activity": 1018629,
+    "peak_observed_month": "2025-09"
+  },
+  {
+    "service": "biometric",
+    "files": 3,
+    "rows": 1361108,
+    "exact_repeat_rows": 62846,
+    "missing_values": {
+      "date": 0,
+      "state": 0,
+      "district": 0,
+      "pincode": 0,
+      "bio_age_5_17": 0,
+      "bio_age_17_": 0
+    },
+    "invalid_dates": 0,
+    "invalid_age_count_rows": 0,
+    "excluded_rows": 0,
+    "first_date": "2025-03-01",
+    "last_date": "2025-12-29",
+    "observed_days": 69,
+    "state_labels": 56,
+    "total_activity": 61776326,
+    "repeat_row_activity": 973587,
+    "top_state_label": "Uttar Pradesh",
+    "top_state_activity": 8385428,
+    "peak_observed_month": "2025-07"
+  },
+  {
+    "service": "demographic",
+    "files": 5,
+    "rows": 2071700,
+    "exact_repeat_rows": 473601,
+    "missing_values": {
+      "date": 0,
+      "state": 0,
+      "district": 0,
+      "pincode": 0,
+      "demo_age_5_17": 0,
+      "demo_age_17_": 0
+    },
+    "invalid_dates": 0,
+    "invalid_age_count_rows": 0,
+    "excluded_rows": 0,
+    "first_date": "2025-03-01",
+    "last_date": "2025-12-29",
+    "observed_days": 95,
+    "state_labels": 64,
+    "total_activity": 49295187,
+    "repeat_row_activity": 12697629,
+    "top_state_label": "Uttar Pradesh",
+    "top_state_activity": 8542328,
+    "peak_observed_month": "2025-03"
+  }
+]

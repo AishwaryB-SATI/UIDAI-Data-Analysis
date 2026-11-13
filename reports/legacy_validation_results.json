@@ -1,0 +1,77 @@
+[
+  {
+    "service": "enrolment",
+    "check": "monthly_activity_reconciles",
+    "passed": true
+  },
+  {
+    "service": "enrolment",
+    "check": "states_activity_reconciles",
+    "passed": true
+  },
+  {
+    "service": "enrolment",
+    "check": "districts_activity_reconciles",
+    "passed": true
+  },
+  {
+    "service": "enrolment",
+    "check": "ages_activity_reconciles",
+    "passed": true
+  },
+  {
+    "service": "enrolment",
+    "check": "manifest_rows_reconcile",
+    "passed": true
+  },
+  {
+    "service": "biometric",
+    "check": "monthly_activity_reconciles",
+    "passed": true
+  },
+  {
+    "service": "biometric",
+    "check": "states_activity_reconciles",
+    "passed": true
+  },
+  {
+    "service": "biometric",
+    "check": "districts_activity_reconciles",
+    "passed": true
+  },
+  {
+    "service": "biometric",
+    "check": "ages_activity_reconciles",
+    "passed": true
+  },
+  {
+    "service": "biometric",
+    "check": "manifest_rows_reconcile",
+    "passed": true
+  },
+  {
+    "service": "demographic",
+    "check": "monthly_activity_reconciles",
+    "passed": true
+  },
+  {
+    "service": "demographic",
+    "check": "states_activity_reconciles",
+    "passed": true
+  },
+  {
+    "service": "demographic",
+    "check": "districts_activity_reconciles",
+    "passed": true
+  },
+  {
+    "service": "demographic",
+    "check": "ages_activity_reconciles",
+    "passed": true
+  },
+  {
+    "service": "demographic",
+    "check": "manifest_rows_reconcile",
+    "passed": true
+  }
+]

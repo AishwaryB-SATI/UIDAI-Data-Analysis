@@ -1,0 +1,79 @@
+{
+  "notebook_code_cells_executed": 5,
+  "input": "bundled aggregate CSVs only",
+  "excel_files_read": 0,
+  "reconciliations": [
+    {
+      "service": "enrolment",
+      "table": "monthly",
+      "total_activity": 5435702,
+      "passed": true
+    },
+    {
+      "service": "enrolment",
+      "table": "states",
+      "total_activity": 5435702,
+      "passed": true
+    },
+    {
+      "service": "enrolment",
+      "table": "districts",
+      "total_activity": 5435702,
+      "passed": true
+    },
+    {
+      "service": "enrolment",
+      "table": "ages",
+      "total_activity": 5435702,
+      "passed": true
+    },
+    {
+      "service": "biometric",
+      "table": "monthly",
+      "total_activity": 61776326,
+      "passed": true
+    },
+    {
+      "service": "biometric",
+      "table": "states",
+      "total_activity": 61776326,
+      "passed": true
+    },
+    {
+      "service": "biometric",
+      "table": "districts",
+      "total_activity": 61776326,
+      "passed": true
+    },
+    {
+      "service": "biometric",
+      "table": "ages",
+      "total_activity": 61776326,
+      "passed": true
+    },
+    {
+      "service": "demographic",
+      "table": "monthly",
+      "total_activity": 49295187,
+      "passed": true
+    },
+    {
+      "service": "demographic",
+      "table": "states",
+      "total_activity": 49295187,
+      "passed": true
+    },
+    {
+      "service": "demographic",
+      "table": "districts",
+      "total_activity": 49295187,
+      "passed": true
+    },
+    {
+      "service": "demographic",
+      "table": "ages",
+      "total_activity": 49295187,
+      "passed": true
+    }
+  ]
+}
