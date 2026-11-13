@@ -6,7 +6,7 @@ Descriptive exploratory data analysis of aggregate Aadhaar enrolment, biometric-
 
 [**View the executed notebook**](notebooks/UIDAI_EDA.ipynb) · [**Open in Google Colab**](https://colab.research.google.com/github/AishwaryB-SATI/UIDAI-Data-Analysis/blob/main/notebooks/UIDAI_EDA.ipynb)
 
-No large Excel files are required. The notebook reads the small CSV tables in `reports/`. When opened in Colab it loads those tables directly from this public repository; a local clone uses local files. Run the notebook cells in order. Colab normally includes Pandas and Matplotlib; install `requirements.txt` if they are unavailable.
+The notebook uses the aggregate CSV tables in `reports/`. When opened in Colab it loads those tables directly from this public repository; a local clone uses local files. Run the notebook cells in order. Colab normally includes Pandas and Matplotlib; install `requirements.txt` if they are unavailable.
 
 For local use, clone this repository, install its dependencies, and open `notebooks/UIDAI_EDA.ipynb` in Jupyter or VS Code with a Python notebook kernel:
 
@@ -26,9 +26,9 @@ pip install -r requirements.txt
 
 ## Relationship to data cleaning
 
-Data cleaning will be maintained in a separate repository. Its link will be added when the owner supplies it. This repository performs analysis of **existing aggregate CSVs**, not raw Excel cleaning. These tables are not a cleaned row-level dataset. They support the included comparisons but cannot reconstruct record-level cleaning or every possible joint distribution.
+Data preparation and exploratory analysis are organized as separate modules. This repository contains the exploratory analysis of the aggregate CSVs. These tables are not a cleaned row-level dataset. They support the included comparisons but cannot reconstruct record-level cleaning or every possible joint distribution.
 
-The tables originate from the earlier prepared project package. Exact repeated rows were audited and retained because source record identity was undocumented. Labels were whitespace-normalized but spelling aliases were preserved. The notebook has been executed against the bundled CSVs; no raw Excel sheets were reread during this preparation.
+Exact repeated rows were audited and retained because source record identity was undocumented. Labels were whitespace-normalized while spelling aliases were preserved. The notebook outputs were generated from the bundled aggregate CSVs.
 
 ## Coverage and provenance
 
@@ -59,4 +59,4 @@ Biometric filenames omit the 1,000,000–1,500,000 portion. Its results describe
 
 ![Demographic activity](reports/demographic_overview.png)
 
-See [analysis findings](reports/ANALYSIS.md), [data dictionary](DATA_DICTIONARY.md), and [current validation](reports/analysis_validation.json). Files prefixed `legacy_` describe validation or review performed when the original project package was prepared; they are retained for traceability and do not describe a new Excel run.
+See [analysis findings](reports/ANALYSIS.md), [data dictionary](DATA_DICTIONARY.md), and [current validation](reports/analysis_validation.json). Files prefixed `legacy_` retain the source-data validation and notebook-review records for traceability.
